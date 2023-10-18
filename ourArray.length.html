@@ -1,0 +1,91 @@
+<!-- Dedicated to God the Father -->
+
+<!-- All Rights Reserved Christopher Topalian Copyright 2000-2023 -->
+
+<!-- https://github.com/ChristopherTopalian -->
+
+<!-- ourArray.length.html -->
+
+<html>
+<head>
+<title> ourArray.length </title>
+
+<style>
+
+body
+{
+    padding: 20px;
+    background-color: rgb(40, 40, 40);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.howManyPeopleDiv
+{
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+</style>
+
+<script>
+
+let people = [
+    "Jane",
+    "Jennifer",
+    "Tabitha",
+    "Joan"
+];
+
+function setStage()
+{
+    let howManyPeopleDiv = document.createElement("div");
+    howManyPeopleDiv.id = "howManyPeopleDiv";
+    howManyPeopleDiv.className = "howManyPeopleDiv";
+    document.body.append(howManyPeopleDiv);
+}
+
+function getNumberOfPeople(whichArray)
+{
+    let numberOfPeople = whichArray.length;
+
+    return numberOfPeople;
+}
+
+function whenLoaded()
+{
+    setStage();
+
+    document.getElementById("howManyPeopleDiv").innerHTML = getNumberOfPeople(people) + " are in the array";
+}
+
+</script>
+
+<body onload = "whenLoaded();">
+
+</body>
+
+</html>
+
+<!--
+
+// Generalized Function Naming
+
+function arrayAmount(whichArray)
+{
+    let numberOfItemsInArray = whichArray.length;
+
+    return numberOfItemsInArray;
+}
+
+// Another version
+
+function arrayAmount(whichArray)
+{
+    return whichArray.length;
+}
+
+-->
